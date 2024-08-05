@@ -1,6 +1,12 @@
 const fs = require('fs')
 
 //create new file
+fs.appendFile('Hello-World.js',"Hello World", function (err) {
+    err ? console.log('err', err) : console.log("saved")
+})
+
+
+//create new file
  fs.appendFile('welcome.txt',"Hello Node", function (err) {
      err ? console.log('err', err) : console.log("saved")
  })

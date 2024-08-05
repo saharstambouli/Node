@@ -1,4 +1,5 @@
-function generateRandomPassword(length) {
+
+function generateRandomPassword(length ) {
     // Defining all characters that can be used
     const charset =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]<>?";
@@ -17,6 +18,12 @@ function generateRandomPassword(length) {
     return password;
   }
   console.log()
+
+
   
-  module.exports = {generateRandomPassword}
+const password = generateRandomPassword(10)
+
+console.log('password', password)
+  
+
   

@@ -2,8 +2,13 @@ const http = require('http')
 
 
  const reqListner = function(req,res){
-     res.writeHead(200)
-     res.end('Hello Node ')
+    if (req.url === "/") { 
+        res.writeHead(200,{'content-type':'text/html'});
+        res.write('<h1> Hello Node !! </h1> ')
+        res.end()
+
+    }
+ 
  }
 
  const server = http.createServer(reqListner)
@@ -11,10 +16,3 @@ const http = require('http')
  server.listen(3000, (err)=>{
     err ? console.log('err', err) : console.log("Hello Node!!!!")
 })
-
-
-//read file async
-
-fs.readFile('./welcome.txt' , (err , data)=>{
-    err ? console.log('err', err) : console.log('data', data.toString())
-}) 
